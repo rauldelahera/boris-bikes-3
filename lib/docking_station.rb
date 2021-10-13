@@ -1,18 +1,19 @@
-class DockingStation
-  attr_reader :bikes_in_dock
+require 'bike'
 
-  def initialize
-    @bikes_in_dock = []
-  end
+class DockingStation
+  attr_reader :bike
 
   def release_bike
     bike = Bike.new
+    # @bike = bike
   end
 
   def dock(bike)
-    # dock = DockingStation.new
-    @bikes_in_dock << bike
-    return @bikes_in_dock[0]
+    @bike = bike
   end
+
+  # def bike
+  #   @bike
+  # end
 end
 
